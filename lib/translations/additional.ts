@@ -34,6 +34,11 @@ export const additionalTranslations: Translations = {
     lt: "Pasiruošę augti visame regione?",
     no: "Klar til å vokse på tvers av regionene?",
   },
+  contactUs: {
+    en: "Contact Us",
+    lt: "Susisiekite",
+    no: "Kontakt oss"
+  },
   fullName: { en: "Full Name", lt: "Pilnas vardas", no: "Fullt navn" },
   company: { en: "Company", lt: "Įmonė", no: "Selskap" },
   email: { en: "Email", lt: "El. paštas", no: "E-post" },
