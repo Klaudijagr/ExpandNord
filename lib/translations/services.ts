@@ -10,7 +10,7 @@ export const serviceTranslations: Record<string, ServiceTranslation> = {
     points: {
       en: ["Comprehensive market analysis", "Competitive landscape mapping", "Entry strategy development"],
       lt: ["Išsami rinkos analizė", "Konkurencinės aplinkos vertinimas", "Patekimo strategijos kūrimas"],
-      no: ["Omfattende markedsanalyse", "Kartlegging av konkurranselandskap", "Utvikling av inntrengningsstrategi"],
+      no: ["Dybdeanalyser av markedet", "Konkurrentkartlegging", "Utvikling av faktabaserte markedsstrategier"],
     },
     closing: {
       en: "Data-driven insights for confident decisions",
@@ -19,13 +19,13 @@ export const serviceTranslations: Record<string, ServiceTranslation> = {
     },
   },
   service2: {
-    title: { en: "B2B & B2G Meetings", lt: "B2B ir B2G susitikimai", no: "B2B og B2G møter" },
+    title: { en: "B2B & B2G Meetings", lt: "B2B ir B2G susitikimai", no: "B2B- og B2G-møter" },
     points: {
       en: ["Pre-qualified prospect meetings", "Government liaison introductions", "Industry event coordination"],
       lt: ["Susitikimai su potencialiais partneriais", "Ryšiai su valdžios institucijomis", "Renginių koordinavimas"],
       no: [
-        "Forhåndskvalifiserte prospektmøter",
-        "Introduksjoner til myndighetskontakter",
+        "Forhåndskvalifiserte møter med potensielle kunder",
+        "Introduksjon til relevante myndigheter",
         "Koordinering av bransjearrangementer",
       ],
     },
@@ -39,15 +39,15 @@ export const serviceTranslations: Record<string, ServiceTranslation> = {
     title: {
       en: "Registration & Legal Setup",
       lt: "Įmonės registracija",
-      no: "Registrering og juridisk oppsett",
+      no: "Selskapsregistrering og juridisk oppsett",
     },
     points: {
       en: ["Company registration assistance", "Legal structure optimization", "Compliance framework setup"],
       lt: ["Pagalba registruojant įmonę", "Teisinės struktūros pritaikymas", "Atitikties sistemos sąranka"],
       no: [
-        "Assistanse med selskapsregistrering",
+        "Bistand med selskapsregistrering",
         "Optimalisering av juridisk struktur",
-        "Oppsett av compliance-rammeverk",
+        "Sikring av etterlevelse og trygt markedsinntog",
       ],
     },
     closing: {
@@ -57,11 +57,11 @@ export const serviceTranslations: Record<string, ServiceTranslation> = {
     },
   },
   service4: {
-    title: { en: "Location & Setup", lt: "Vieta ir sąranka", no: "Lokasjon og oppsett" },
+    title: { en: "Location & Setup", lt: "Vieta ir sąranka", no: "Lokasjon og etablering" },
     points: {
       en: ["Office space identification", "Virtual office solutions", "Operational infrastructure setup"],
       lt: ["Biuro erdvės identifikavimas", "Virtualaus biuro sprendimai", "Veiklos infrastruktūros sąranka"],
-      no: ["Identifisering av kontorlokaler", "Virtuelle kontorløsninger", "Oppsett av operasjonell infrastruktur"],
+      no: ["Hjelp til å finne kontorlokaler", "Virtuelle kontorløsninger", "Etablering av operasjonell infrastruktur"],
     },
     closing: {
       en: "Physical presence without the hassle",
@@ -78,7 +78,7 @@ export const serviceTranslations: Record<string, ServiceTranslation> = {
         "Turinio lokalizacijos strategija",
         "Skaitmeninės rinkodaros kampanijos",
       ],
-      no: ["Bygging av lokale medierelasjoner", "Strategi for innholdslokalisering", "Digitale markedsføringskampanjer"],
+      no: ["Bygging av relasjoner med lokale medier", "Skreddersydd innholdsstrategi", "Digitale kampanjer for økt synlighet"],
     },
     closing: {
       en: "Brand visibility in new markets",
@@ -90,7 +90,7 @@ export const serviceTranslations: Record<string, ServiceTranslation> = {
     title: {
       en: "Government & Institutional Engagement",
       lt: "Vyriausybės ir institucinė veikla",
-      no: "Myndighets- og institusjonell engasjement",
+      no: "Myndighetskontakt og institusjonell støtte",
     },
     points: {
       en: ["Regulatory navigation support", "Government incentive identification", "Public sector relationship building"],
@@ -100,9 +100,9 @@ export const serviceTranslations: Record<string, ServiceTranslation> = {
         "Viešojo sektorius ryšių kūrimas",
       ],
       no: [
-        "Støtte til regulatorisk navigering",
+        "Navigering av regulatoriske krav",
         "Identifisering av offentlige insentiver",
-        "Bygging av offentlige sektorrelasjoner",
+        "Relasjonsbygging i offentlig sektor",
       ],
     },
     closing: {
@@ -125,9 +125,9 @@ export const serviceTranslations: Record<string, ServiceTranslation> = {
         "Tarpvalstybinių sandorių palaikymas",
       ],
       no: [
-        "Skatteoptimaliseringsstrategier",
-        "Planlegging av finansiell struktur",
-        "Støtte til grenseoverskridende transaksjoner",
+        "Skatteoptimalisering",
+        "Finansiell planlegging",
+        "Bistand i grenseoverskridende transaksjoner",
       ],
     },
     closing: {
@@ -150,15 +150,15 @@ export const serviceTranslations: Record<string, ServiceTranslation> = {
         "Partnerystės derybų palaikymas",
       ],
       no: [
-        "Identifisering av strategiske partnere",
+        "Finne riktige samarbeidspartnere",
         "Kartlegging av distributørnettverk",
-        "Støtte til partnerskapsforhandlinger",
+        "Støtte i forhandlinger",
       ],
     },
     closing: {
       en: "Accelerate market penetration",
       lt: "Efektyvi plėtra",
-      no: "Akseler markedspenetrasjon",
+      no: "Akselerert markedspenetrasjon",
     },
   },
 }

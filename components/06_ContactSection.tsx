@@ -4,9 +4,10 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { ArrowRight, Mail, Linkedin } from 'lucide-react'
+import { ArrowRight, Mail } from 'lucide-react'
 import { useOnceInView } from '@/hooks/useIntersectionObserver'
 import { useContactForm } from '@/hooks/useContactForm'
+import { useLanguage } from '@/hooks/useLanguage'
 
 interface ContactSectionProps {
   translations: {
@@ -25,6 +26,9 @@ interface ContactSectionProps {
 export const ContactSection: React.FC<ContactSectionProps> = ({ translations }) => {
   const { ref, isInView } = useOnceInView(0.2)
   const { formData, isSubmitting, updateField, handleSubmit } = useContactForm()
+  const { language } = useLanguage()
+
+  const contactEmail = language === 'no' ? 'martyna@expandnord.com' : 'klaudija@expandnord.com'
 
   return (
     <section ref={ref} id="contact" className="py-32 bg-gradient-to-r from-[#4B7B6A]/5 to-[#6EA282]/5">
@@ -112,20 +116,13 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ translations }) 
               </form>
 
               <div className="mt-12 text-center">
-                <div className="flex items-center justify-center space-x-8">
+                <div className="flex items-center justify-center">
                   <a
-                    href="mailto:hello@expandnord.com"
+                    href={`mailto:${contactEmail}`}
                     className="flex items-center text-[#A4C6B7] hover:text-white transition-colors duration-300 group"
                   >
                     <Mail className="h-5 w-5 mr-2 group-hover:scale-110 transition-transform duration-300" />
-                    hello@expandnord.com
-                  </a>
-                  <a
-                    href="#"
-                    className="flex items-center text-[#A4C6B7] hover:text-white transition-colors duration-300 group"
-                  >
-                    <Linkedin className="h-5 w-5 mr-2 group-hover:scale-110 transition-transform duration-300" />
-                    LinkedIn
+                    {contactEmail}
                   </a>
                 </div>
               </div>

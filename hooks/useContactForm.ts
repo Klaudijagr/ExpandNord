@@ -9,6 +9,8 @@ const initialFormData: FormData = {
   message: '',
 }
 
+const CONTACT_EMAILS = ['martyna@expandnord.com', 'klaudija@expandnord.com']
+
 export const useContactForm = () => {
   const [formData, setFormData] = useState<FormData>(initialFormData)
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -24,12 +26,22 @@ export const useContactForm = () => {
     setSubmitStatus('idle')
 
     try {
-      // TODO: Implement actual form submission
-      console.log('Form submitted:', formData)
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      
+      // Send form data to both email addresses
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          recipients: CONTACT_EMAILS,
+        }),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to send form')
+      }
+
       setSubmitStatus('success')
       setFormData(initialFormData)
     } catch (error) {

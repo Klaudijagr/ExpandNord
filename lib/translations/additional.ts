@@ -7,49 +7,49 @@ export const additionalTranslations: Translations = {
   step1Desc: {
     en: "Understanding your goals and market ambitions",
     lt: "Jūsų tikslų ir rinkos ambicijų supratimas",
-    no: "Forstå dine mål og markedsambisjoner",
+    no: "Vi kartlegger dine mål og ambisjoner",
   },
-  step2: { en: "Market Entry Blueprint", lt: "Rinkos patekimo planas", no: "Markedsinntreden-plan" },
+  step2: { en: "Market Entry Blueprint", lt: "Rinkos patekimo planas", no: "Plan for markedsinntreden" },
   step2Desc: {
     en: "Detailed roadmap with timelines and milestones",
     lt: "Detalus kelių žemėlapis su terminais ir etapais",
-    no: "Detaljert veikart med tidslinjer og milepæler",
+    no: "Et tydelig veikart med tidslinje",
   },
-  step3: { en: "Execution Phase", lt: "Įgyvendinimo etapas", no: "Gjennomføringsfase" },
+  step3: { en: "Execution Phase", lt: "Įgyvendinimo etapas", no: "Gjennomføring" },
   step3Desc: {
     en: "Hands-on implementation of your expansion strategy",
     lt: "Praktinis jūsų plėtros strategijos įgyvendinimas",
-    no: "Praktisk implementering av din ekspansjonsstrategi",
+    no: "Vi implementerer strategien i praksis",
   },
   step4: { en: "Ongoing Support", lt: "Nuolatinis palaikymas", no: "Kontinuerlig støtte" },
   step4Desc: {
     en: "Continuous optimization and growth support",
     lt: "Nuolatinis optimizavimas ir augimo palaikymas",
-    no: "Kontinuerlig optimalisering og vekststøtte",
+    no: "Løpende optimalisering og oppfølging for videre vekst",
   },
 
   // Contact Section
   readyToGrow: {
     en: "Ready to grow across the region?",
     lt: "Pasiruošę augti visame regione?",
-    no: "Klar til å vokse på tvers av regionen?",
+    no: "Klar til å vokse på tvers av regionene?",
   },
   fullName: { en: "Full Name", lt: "Pilnas vardas", no: "Fullt navn" },
   company: { en: "Company", lt: "Įmonė", no: "Selskap" },
   email: { en: "Email", lt: "El. paštas", no: "E-post" },
-  interestedIn: { en: "I'm interested in:", lt: "Man įdomu:", no: "Jeg er interessert i:" },
+  interestedIn: { en: "I'm interested in:", lt: "Man įdomu:", no: "Vi er interessert i:" },
   balticNordic: {
     en: "Baltic → Nordic expansion",
     lt: "Baltijos → Šiaurės šalių plėtra",
-    no: "Baltisk → Nordisk ekspansjon",
+    no: "Ekspansjon fra Baltikum til Norden",
   },
   nordicBaltic: {
     en: "Nordic → Baltic expansion",
     lt: "Šiaurės šalių → Baltijos plėtra",
-    no: "Nordisk → Baltisk ekspansjon",
+    no: "Ekspansjon fra Norden til Baltikum",
   },
   message: { en: "Message", lt: "Žinutė", no: "Melding" },
-  sendMessage: { en: "Send Message", lt: "Siųsti žinutę", no: "Send melding" },
+  sendMessage: { en: "Send Message", lt: "Siųsti žinutę", no: "Send oss en melding!" },
 
   // Footer
   footer: {

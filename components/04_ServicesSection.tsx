@@ -1,6 +1,5 @@
 import React from 'react'
 import { Card, CardContent } from '@/components/ui/card'
-import { ChevronRight, ArrowRight } from 'lucide-react'
 import { useOnceInView } from '@/hooks/useIntersectionObserver'
 import { Service } from '@/lib/types'
 
@@ -42,15 +41,13 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ services, sect
                   </div>
                   <ul className="space-y-3 mb-6">
                     {service.points.map((point, pointIndex) => (
-                      <li key={pointIndex} className="flex items-start">
-                        <ChevronRight className="h-4 w-4 text-[#9ED0A8] mt-0.5 mr-3 flex-shrink-0" />
-                        <span className="text-[#A4C6B7] text-sm font-light leading-relaxed">{point}</span>
+                      <li key={pointIndex} className="text-[#A4C6B7] text-sm font-light leading-relaxed pl-3">
+                        {point}
                       </li>
                     ))}
                   </ul>
-                  <div className="flex items-center text-[#9ED0A8] font-medium group">
+                  <div className="text-[#9ED0A8] font-medium">
                     <span className="text-sm">{service.closing}</span>
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </div>
                 </CardContent>
               </Card>

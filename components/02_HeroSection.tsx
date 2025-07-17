@@ -9,9 +9,10 @@ interface HeroSectionProps {
     heroSubtitle: string
     getStarted: string
   }
+  onGetStarted: () => void
 }
 
-export const HeroSection: React.FC<HeroSectionProps> = ({ translations }) => {
+export const HeroSection: React.FC<HeroSectionProps> = ({ translations, onGetStarted }) => {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center px-6 relative bg-gradient-to-b from-[#0A2D28] to-[#4B7B6A]/10">
       <div className="max-w-5xl mx-auto text-center space-y-16">
@@ -33,6 +34,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ translations }) => {
           <Button
             variant="outline"
             size="lg"
+            onClick={onGetStarted}
             className="border-[#6EA282] text-[#6EA282] hover:bg-[#6EA282] hover:text-white transition-all duration-300 px-10 py-4 text-base font-medium bg-transparent group shadow-lg hover:shadow-xl hover:shadow-[#6EA282]/20"
           >
             {translations.getStarted}
