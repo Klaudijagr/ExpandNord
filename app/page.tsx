@@ -12,8 +12,9 @@ import { ValuePropositions } from '@/components/03_ValuePropositions'
 import { ServicesSection } from '@/components/04_ServicesSection'
 import { ProcessSection } from '@/components/05_ProcessSection'
 import { ContactSection } from '@/components/06_ContactSection'
-import { Footer } from '@/components/07_Footer'
-import { FloatingCTA } from '@/components/08_FloatingCTA'
+import { Footer } from '@/components/Footer'
+import { FloatingCTA } from '@/components/FloatingCTA'
+import { AboutSection } from '@/components/03_AboutSection'
 
 export default function ExpandNordWebsite() {
   const { language, setLanguage } = useLanguage()
@@ -81,6 +82,14 @@ export default function ExpandNordWebsite() {
         services={services}
         sectionTitle={t('services')}
       />
+
+      <AboutSection translations={{
+        aboutTitle: t('aboutTitle'),
+        aboutText1: t('aboutText1'),
+        aboutText2: t('aboutText2'),
+        aboutText3: t('aboutText3'),
+        aboutQuote: t('aboutQuote'),
+      }} />
 
       <ProcessSection
         sectionTitle={t('ourProcess')}

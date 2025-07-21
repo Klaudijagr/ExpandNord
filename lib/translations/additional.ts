@@ -64,4 +64,3 @@ export const additionalTranslations: Translations = {
   },
   privacy: { en: "Privacy", lt: "Privatumas", no: "Personvern" },
   terms: { en: "Terms", lt: "Sąlygos", no: "Vilkår" },
-}
