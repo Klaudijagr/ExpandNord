@@ -20,25 +20,54 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({ sectionTitle, st
         >
           {sectionTitle}
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto relative">
+          {/* Vertical Line */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-[#6EA282] to-[#4B7B6A]/30"></div>
+
           {steps.map((step, index) => (
             <div
               key={index}
-              className={`text-center group transition-all duration-700 ${
-                isInView ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-              } ${index % 2 === 0 ? "" : "lg:translate-y-8"}`}
-              style={{ transitionDelay: `${index * 200}ms` }}
+              className={`flex items-center mb-24 last:mb-0 transition-all duration-1000 ${
+                isInView ? "opacity-100" : "opacity-0"
+              } ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}
+              style={{ transitionDelay: `${index * 300}ms` }}
             >
-              <div className="relative mb-8">
-                <div className="w-24 h-24 bg-gradient-to-br from-[#4B7B6A] to-[#6EA282] rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-all duration-500 shadow-xl text-2xl font-medium">
+              {/* Content Side */}
+              <div 
+                className={`w-1/2 ${index % 2 === 0 ? "pr-12 text-right" : "pl-12 text-left"} transform transition-all duration-1000`}
+                style={{
+                  transform: isInView 
+                    ? "translateX(0)" 
+                    : `translateX(${index % 2 === 0 ? "-20%" : "20%"})`,
+                  transitionDelay: `${index * 300}ms`
+                }}
+              >
+                <h3 className="text-xl font-medium text-white mb-4">{step.title}</h3>
+                <p className="text-[#A4C6B7] font-light leading-relaxed">{step.desc}</p>
+              </div>
+
+              {/* Circle in the middle */}
+              <div className="relative">
+                <div 
+                  className={`w-16 h-16 bg-gradient-to-br from-[#4B7B6A] to-[#6EA282] rounded-full flex items-center justify-center text-xl font-medium transform transition-all duration-700 hover:scale-110 shadow-xl ${
+                    isInView ? "scale-100" : "scale-0"
+                  }`}
+                  style={{ transitionDelay: `${index * 300 + 200}ms` }}
+                >
                   {index + 1}
                 </div>
-                {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-12 left-full w-full h-0.5 bg-gradient-to-r from-[#6EA282] to-transparent opacity-30"></div>
-                )}
+                {/* Horizontal connector line */}
+                <div 
+                  className={`absolute top-1/2 transform -translate-y-1/2 w-12 h-0.5 bg-gradient-to-r ${
+                    index % 2 === 0 
+                      ? "right-full from-[#6EA282] to-transparent" 
+                      : "left-full from-transparent to-[#6EA282]"
+                  }`}
+                ></div>
               </div>
-              <h3 className="text-xl font-medium text-white mb-4">{step.title}</h3>
-              <p className="text-[#A4C6B7] font-light leading-relaxed">{step.desc}</p>
+
+              {/* Empty Side (for alignment) */}
+              <div className="w-1/2"></div>
             </div>
           ))}
         </div>
