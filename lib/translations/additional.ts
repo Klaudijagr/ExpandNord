@@ -63,4 +63,5 @@ export const additionalTranslations: Translations = {
     no: "© 2025 ExpandNord. Alle rettigheter forbeholdt.",
   },
   privacy: { en: "Privacy", lt: "Privatumas", no: "Personvern" },
-  terms: { en: "Terms", lt: "Sąlygos", no: "Vilkår" },
+  terms: { en: "Terms", lt: "Sąlygos", no: "Vilkår" }
+}
