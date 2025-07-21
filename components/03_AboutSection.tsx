@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { useOnceInView } from '@/hooks/useIntersectionObserver'
+import { useLanguage } from '@/hooks/useLanguage'
 
 interface AboutSectionProps {
   translations: {
@@ -14,6 +15,9 @@ interface AboutSectionProps {
 
 export const AboutSection: React.FC<AboutSectionProps> = ({ translations }) => {
   const { ref, isInView } = useOnceInView(0.2)
+  const { language } = useLanguage()
+
+  const position = language === 'lt' ? 'Vadovaujanti partnerė' : 'Managing Partner'
 
   return (
     <section ref={ref} id="about" className="py-32 bg-gradient-to-r from-[#4B7B6A]/5 to-[#6EA282]/5">
@@ -32,21 +36,21 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ translations }) => {
                 isInView ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
               }`}
             >
-              We're a team led by two managing partners with complementary strengths and a shared mission: helping businesses grow across borders with confidence and clarity.
+              {translations.aboutText1}
             </p>
             <p
               className={`text-lg text-[#A4C6B7] transition-all duration-1000 delay-200 ${
                 isInView ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
               }`}
             >
-              One partner brings years of experience connecting Lithuanian businesses with opportunities in Norway, building strong partnerships and navigating international business culture.
+              {translations.aboutText2}
             </p>
             <p
               className={`text-lg text-[#A4C6B7] transition-all duration-1000 delay-300 ${
                 isInView ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
               }`}
             >
-              The other has a background in political public relations, helping companies enter new markets through strategic communication, reputation building, and tailored PR strategies.
+              {translations.aboutText3}
             </p>
             <div
               className={`mt-12 border-l-4 border-[#6EA282] pl-6 transition-all duration-1000 delay-400 ${
@@ -68,7 +72,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ translations }) => {
                 </div>
                 <div>
                   <p className="text-white font-medium">Klaudija Grabauskaitė</p>
-                  <p className="text-[#A4C6B7]">Managing Partner, ExpandNord</p>
+                  <p className="text-[#A4C6B7]">{position}, ExpandNord</p>
                   <a href="mailto:klaudija@expandnord.com" className="text-[#A4C6B7] hover:text-white transition-colors duration-300">
                     klaudija@expandnord.com
                   </a>

@@ -39,6 +39,16 @@ export const additionalTranslations: Translations = {
     lt: "Susisiekite",
     no: "Kontakt oss"
   },
+  headquarters: {
+    en: "Headquarters",
+    lt: "Centrinė būstinė",
+    no: "Hovedkontor"
+  },
+  managingPartner: {
+    en: "Managing Partner",
+    lt: "Vadovaujanti partnerė",
+    no: "Administrerende partner"
+  },
   fullName: { en: "Full Name", lt: "Pilnas vardas", no: "Fullt navn" },
   company: { en: "Company", lt: "Įmonė", no: "Selskap" },
   email: { en: "Email", lt: "El. paštas", no: "E-post" },

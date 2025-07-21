@@ -12,22 +12,22 @@ export const coreTranslations: Translations = {
   aboutTitle: { en: "About Us", lt: "Apie mus", no: "Om oss" },
   aboutText1: {
     en: "We're a team led by two managing partners with complementary strengths and a shared mission: helping businesses grow across borders with confidence and clarity.",
-    lt: "Mes esame komanda, vadovaujama dviejų partnerių su papildančiomis stiprybėmis ir bendra misija: padėti verslams augti už sienų ribų su pasitikėjimu ir aiškumu.",
+    lt: "Mūsų komandą į priekį veda dvi vadovaujančios partnerės – skirtingų, tačiau vienas kitą papildančių stiprybių profesionalės. Mus vienija bendras tikslas: padėti verslams plėstis į Skandinavijos šalis.",
     no: "Vi er et team ledet av to partnere med komplementære styrker og en felles misjon: å hjelpe bedrifter å vokse over landegrensene med selvtillit og klarhet."
   },
   aboutText2: {
     en: "One partner brings years of experience connecting Lithuanian businesses with opportunities in Norway, building strong partnerships and navigating international business culture.",
-    lt: "Viena iš mūsų partnerių turi ilgametę patirtį jungiant Lietuvos įmones su galimybėmis Norvegijoje, kuriant tvirtą partnerystę ir orientuojantis praktiniuose bei kultūriniuose niuansuose.",
+    lt: "Viena iš mūsų - daugelį metų sėkmingai jungia Lietuvos ir Norvegijos verslus, padeda užmegzti tvirtus bendradarbiavimo ryšius ir orientuotis tarptautinės verslo kultūros subtilybėse.",
     no: "En av våre partnere har flere års erfaring med å koble litauiske bedrifter med muligheter i Norge, bygge sterke partnerskap og navigere i internasjonal forretningskultur."
   },
   aboutText3: {
     en: "The other has a background in political public relations, helping companies enter new markets through strategic communication, reputation building, and tailored PR strategies.",
-    lt: "Kita partnerė turi patirties politinių viešųjų ryšių srityje, padedant įmonėms įeiti į naujas rinkas per strateginę komunikaciją, reputacijos kūrimą ir pritaikytas viešųjų ryšių strategijas.",
+    lt: "Kita partnerė – strateginės komunikacijos ekspertė, padedanti įmonėms žengti į naujas rinkas formuojant įmonės įvaizdį ir individualiai pritaikytas viešųjų ryšių strategijas.",
     no: "Den andre partneren har bakgrunn fra politisk PR, og hjelper bedrifter med å gå inn i nye markeder gjennom strategisk kommunikasjon, omdømmebygging og skreddersydde PR-strategier."
   },
   aboutQuote: {
     en: "Crossing borders takes more than ambition—it takes insight, experience, and the right partners. Talk to us and let's make it happen.",
-    lt: "Sienų kirtimui reikia daugiau nei ambicijų—tam reikia įžvalgų, patirties ir tinkamų partnerių. Pasikalbėkime ir padarykime tai realybe.",
+    lt: "Augimui reikia ambicijos. Tačiau to neužtenka - reikia aiškios krypties, patikimų partnerių ir tikslių sprendimų. Susisiekime ir pradėkime šią kelionę kartu.",
     no: "Å krysse grenser krever mer enn ambisjoner—det krever innsikt, erfaring og de rette partnerne. Snakk med oss og la oss gjøre det mulig."
   },
 
