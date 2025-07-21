@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { ArrowRight } from 'lucide-react'
 import { AnimatedHeadline } from './AnimatedHeadline'
@@ -14,8 +15,24 @@ interface HeroSectionProps {
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ translations, onGetStarted }) => {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-6 relative bg-gradient-to-b from-[#0A2D28] to-[#4B7B6A]/10">
-      <div className="max-w-5xl mx-auto text-center space-y-16">
+    <section className="min-h-screen flex flex-col items-center justify-center px-6 relative bg-gradient-to-b from-[#0A2D28] to-[#4B7B6A]/10 overflow-hidden">
+      {/* Background Image with Animation */}
+      <div 
+        className="absolute inset-0 z-0 opacity-0 animate-[fadeIn_2s_ease-out_forwards] scale-110"
+        style={{
+          animation: 'fadeIn 2s ease-out forwards, slowZoom 20s ease-in-out infinite'
+        }}
+      >
+        <Image
+          src="/Main pic.png"
+          alt="ExpandNord Background"
+          fill
+          className="object-cover transition-transform duration-1000"
+          priority
+        />
+      </div>
+
+      <div className="max-w-5xl mx-auto text-center space-y-16 relative z-10">
         <div className="space-y-6">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-tight text-white leading-tight">
             <AnimatedHeadline text={translations.heroTitle} />
