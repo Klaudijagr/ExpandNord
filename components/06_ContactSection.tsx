@@ -17,7 +17,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ translations }) 
   const { ref, isInView } = useOnceInView(0.2)
   const { language } = useLanguage()
 
-  const contactEmail = language === 'no' ? 'martyna@expandnord.com' : 'klaudija@expandnord.com'
+  const contactEmail = language === 'no' ? 'info@expandnord.com' : 'klaudija@expandnord.com'
   const position = language === 'lt' ? 'Vadovaujanti partnerė' : 'Managing Partner'
 
   return (
