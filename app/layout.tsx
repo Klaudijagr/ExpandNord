@@ -51,11 +51,19 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'ExpandNord',
+    url: 'https://expandnord.com',
+    images: [
+      {
+        url: 'https://expandnord.com/hero.webp',
+        alt: 'ExpandNord - Baltic and Nordic Business Expansion',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'ExpandNord – Baltic ↔ Nordic Business Expansion',
     description: 'Business expansion consultancy connecting Baltic and Nordic markets.',
+    images: ['https://expandnord.com/hero.webp'],
   },
   robots: {
     index: true,
