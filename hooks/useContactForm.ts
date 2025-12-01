@@ -1,3 +1,7 @@
+// TODO: This hook is ready but not used. Add a contact form component to ContactSection
+// that uses this hook to submit inquiries via Web3Forms instead of mailto links.
+// Recipients configured in Web3Forms dashboard: martyna@expandnord.com, klaudija@expandnord.com
+
 import { useCallback, useState } from 'react'
 import type { FormData } from '@/lib/types'
 
