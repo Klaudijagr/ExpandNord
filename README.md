@@ -1,30 +1,82 @@
-# Expand nord website
+# ExpandNord
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+Business expansion consultancy connecting Baltic and Nordic markets.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/klaudijas-projects-2e61cdde/v0-expand-nord-website)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/MRtS2hGZPBO)
+## Tech Stack
 
-## Overview
+- **Framework**: Next.js 16 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 4
+- **UI Components**: Radix UI
+- **Icons**: Lucide React
+- **Linting**: Biome
+- **Forms**: Web3Forms
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## Getting Started
+
+### Prerequisites
+
+- Node.js 20.9 or later
+- bun, pnpm, or npm
+
+### Installation
+
+```bash
+# Install dependencies
+bun install
+
+# Start development server
+bun dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Production Build
+
+```bash
+bun run build
+bun start
+```
+
+### Linting & Formatting
+
+```bash
+bun run lint      # Check for issues
+bun run format    # Format code
+bun run check     # Fix all issues
+bun run typecheck # TypeScript check
+```
+
+## Project Structure
+
+```
+├── app/                    # Next.js App Router
+│   ├── privacy/           # Privacy policy page
+│   ├── terms/             # Terms of service page
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Home page
+├── components/            # React components
+│   └── ui/               # Base UI components
+├── hooks/                 # Custom React hooks
+├── lib/                   # Utilities and configurations
+│   └── translations/      # Multi-language support
+└── public/               # Static assets
+```
+
+## Features
+
+- Multi-language support (English, Lithuanian, Norwegian)
+- Responsive design
+- Contact form via Web3Forms
+- Animated sections with Intersection Observer
+- Language preference persistence
+- React Compiler for automatic memoization
+- PWA support
 
 ## Deployment
 
-Your project is live at:
+Deployed on Vercel at [expandnord.com](https://expandnord.com). Push to `main` to trigger automatic deployment.
 
-**[https://vercel.com/klaudijas-projects-2e61cdde/v0-expand-nord-website](https://vercel.com/klaudijas-projects-2e61cdde/v0-expand-nord-website)**
+## License
 
-## Build your app
-
-Continue building your app on:
-
-**[https://v0.dev/chat/projects/MRtS2hGZPBO](https://v0.dev/chat/projects/MRtS2hGZPBO)**
-
-## How It Works
-
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+All rights reserved. Copyright ExpandNord.

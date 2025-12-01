@@ -1,5 +1,5 @@
-import { useState, useCallback } from 'react'
-import { FormData } from '@/lib/types'
+import { useCallback, useState } from 'react'
+import type { FormData } from '@/lib/types'
 
 const initialFormData: FormData = {
   fullName: '',
@@ -9,48 +9,53 @@ const initialFormData: FormData = {
   message: '',
 }
 
-const CONTACT_EMAILS = ['martyna@expandnord.com', 'klaudija@expandnord.com']
-
 export const useContactForm = () => {
   const [formData, setFormData] = useState<FormData>(initialFormData)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
   const updateField = useCallback((field: keyof FormData, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }))
+    setFormData((prev) => ({ ...prev, [field]: value }))
   }, [])
 
-  const handleSubmit = useCallback(async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    setSubmitStatus('idle')
+  const handleSubmit = useCallback(
+    async (e: React.FormEvent) => {
+      e.preventDefault()
+      setIsSubmitting(true)
+      setSubmitStatus('idle')
 
-    try {
-      // Send form data to both email addresses
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ...formData,
-          recipients: CONTACT_EMAILS,
-        }),
-      })
+      try {
+        const web3FormData = new FormData()
+        web3FormData.append('access_key', 'b4906863-2b9e-4cfb-8b3e-dc7e757ba1da')
+        web3FormData.append('name', formData.fullName)
+        web3FormData.append('company', formData.company)
+        web3FormData.append('email', formData.email)
+        web3FormData.append('interest', formData.interest)
+        web3FormData.append('message', formData.message)
+        web3FormData.append('subject', `New Contact - ${formData.interest}`)
 
-      if (!response.ok) {
-        throw new Error('Failed to send form')
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: web3FormData,
+        })
+
+        const data = await response.json()
+
+        if (!data.success) {
+          throw new Error('Failed to send form')
+        }
+
+        setSubmitStatus('success')
+        setFormData(initialFormData)
+      } catch (error) {
+        console.error('Form submission error:', error)
+        setSubmitStatus('error')
+      } finally {
+        setIsSubmitting(false)
       }
-
-      setSubmitStatus('success')
-      setFormData(initialFormData)
-    } catch (error) {
-      console.error('Form submission error:', error)
-      setSubmitStatus('error')
-    } finally {
-      setIsSubmitting(false)
-    }
-  }, [formData])
+    },
+    [formData]
+  )
 
   const resetForm = useCallback(() => {
     setFormData(initialFormData)

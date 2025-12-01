@@ -1,6 +1,6 @@
-import React from 'react'
+import { Target, TrendingUp, Users } from 'lucide-react'
+import type React from 'react'
 import { Card, CardContent } from '@/components/ui/card'
-import { Target, Users, TrendingUp } from 'lucide-react'
 import { useOnceInView } from '@/hooks/useIntersectionObserver'
 
 interface ValuePropositionsProps {
@@ -18,23 +18,23 @@ export const ValuePropositions: React.FC<ValuePropositionsProps> = ({ translatio
   const { ref, isInView } = useOnceInView(0.2)
 
   const valueProps = [
-    { 
-      icon: Target, 
-      title: translations.marketIntel, 
-      desc: translations.marketIntelDesc, 
-      delay: 0 
+    {
+      icon: Target,
+      title: translations.marketIntel,
+      desc: translations.marketIntelDesc,
+      delay: 0,
     },
-    { 
-      icon: Users, 
-      title: translations.connections, 
-      desc: translations.connectionsDesc, 
-      delay: 200 
+    {
+      icon: Users,
+      title: translations.connections,
+      desc: translations.connectionsDesc,
+      delay: 200,
     },
-    { 
-      icon: TrendingUp, 
-      title: translations.strategy, 
-      desc: translations.strategyDesc, 
-      delay: 400 
+    {
+      icon: TrendingUp,
+      title: translations.strategy,
+      desc: translations.strategyDesc,
+      delay: 400,
     },
   ]
 
@@ -48,7 +48,7 @@ export const ValuePropositions: React.FC<ValuePropositionsProps> = ({ translatio
               <Card
                 key={index}
                 className={`bg-transparent border-[#4B7B6A]/20 hover:border-[#6EA282]/40 transition-all duration-700 group hover:shadow-2xl hover:shadow-[#6EA282]/10 transform ${
-                  isInView ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+                  isInView ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
                 }`}
                 style={{ transitionDelay: `${item.delay}ms` }}
               >

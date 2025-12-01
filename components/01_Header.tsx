@@ -1,7 +1,7 @@
-import React from 'react'
-import { Button } from '@/components/ui/button'
 import { ArrowRight } from 'lucide-react'
-import { Language } from '@/lib/types'
+import type React from 'react'
+import { Button } from '@/components/ui/button'
+import type { Language } from '@/lib/types'
 
 interface HeaderProps {
   scrolled: boolean
@@ -22,14 +22,16 @@ export const Header: React.FC<HeaderProps> = ({
   language,
   onLanguageChange,
   onBookCall,
-  translations
+  translations,
 }) => {
   const languages: Language[] = ['en', 'lt', 'no']
 
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-        scrolled ? "bg-[#0A2D28]/90 backdrop-blur-xl border-b border-white/5" : "bg-[#0A2D28]/60 backdrop-blur-sm"
+        scrolled
+          ? 'bg-[#0A2D28]/90 backdrop-blur-xl border-b border-white/5'
+          : 'bg-[#0A2D28]/60 backdrop-blur-sm'
       }`}
     >
       <div className="container mx-auto px-6 py-5">
@@ -72,11 +74,12 @@ export const Header: React.FC<HeaderProps> = ({
               {languages.map((lang, index) => (
                 <div key={lang} className="flex items-center">
                   <button
+                    type="button"
                     onClick={() => onLanguageChange(lang)}
                     className={`px-3 py-1.5 rounded-md transition-all duration-300 text-xs font-medium ${
                       language === lang
-                        ? "text-white bg-[#4B7B6A]/30 shadow-sm"
-                        : "text-[#A4C6B7] hover:text-white hover:bg-white/5"
+                        ? 'text-white bg-[#4B7B6A]/30 shadow-sm'
+                        : 'text-[#A4C6B7] hover:text-white hover:bg-white/5'
                     }`}
                   >
                     {lang.toUpperCase()}

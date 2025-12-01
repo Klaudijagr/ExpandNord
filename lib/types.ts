@@ -1,4 +1,4 @@
-export type Language = "en" | "lt" | "no"
+export type Language = 'en' | 'lt' | 'no'
 
 export interface TranslationEntry {
   en: string

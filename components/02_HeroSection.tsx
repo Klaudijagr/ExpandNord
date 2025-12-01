@@ -1,7 +1,7 @@
-import React from 'react'
-import Image from 'next/image'
-import { Button } from '@/components/ui/button'
 import { ArrowRight } from 'lucide-react'
+import Image from 'next/image'
+import type React from 'react'
+import { Button } from '@/components/ui/button'
 import { AnimatedHeadline } from './AnimatedHeadline'
 
 interface HeroSectionProps {
@@ -17,18 +17,19 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ translations, onGetSta
   return (
     <section className="min-h-screen flex flex-col items-center justify-center px-6 relative bg-gradient-to-b from-[#0A2D28] to-[#4B7B6A]/10 overflow-hidden">
       {/* Background Image with Animation */}
-      <div 
+      <div
         className="absolute inset-0 z-0 opacity-0 animate-[fadeIn_2s_ease-out_forwards] scale-110"
         style={{
-          animation: 'fadeIn 2s ease-out forwards, slowZoom 20s ease-in-out infinite'
+          animation: 'fadeIn 2s ease-out forwards, slowZoom 20s ease-in-out infinite',
         }}
       >
         <Image
-          src="/Main pic.png"
+          src="/hero.webp"
           alt="ExpandNord Background"
           fill
           className="object-cover transition-transform duration-1000"
           priority
+          quality={90}
         />
       </div>
 
@@ -40,14 +41,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ translations, onGetSta
           <div className="max-w-3xl mx-auto">
             <p
               className="text-lg md:text-xl text-[#A4C6B7] leading-relaxed font-light opacity-0 animate-[fadeInUp_1s_ease-out_2s_forwards]"
-              style={{ animationDelay: "2s" }}
+              style={{ animationDelay: '2s' }}
             >
               {translations.heroSubtitle}
             </p>
           </div>
         </div>
 
-        <div className="pt-4 opacity-0 animate-[fadeInUp_1s_ease-out_3s_forwards]" style={{ animationDelay: "3s" }}>
+        <div
+          className="pt-4 opacity-0 animate-[fadeInUp_1s_ease-out_3s_forwards]"
+          style={{ animationDelay: '3s' }}
+        >
           <Button
             variant="outline"
             size="lg"

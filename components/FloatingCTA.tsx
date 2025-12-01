@@ -1,13 +1,13 @@
+import { ArrowRight } from 'lucide-react'
 import React from 'react'
 import { Button } from '@/components/ui/button'
-import { ArrowRight } from 'lucide-react'
 
 interface FloatingCTAProps {
   text: string
   onClick: () => void
 }
 
-export const FloatingCTA: React.FC<FloatingCTAProps> = React.memo(({ text, onClick }) => {
+const FloatingCTAComponent: React.FC<FloatingCTAProps> = ({ text, onClick }) => {
   return (
     <div className="fixed bottom-8 right-8 z-40">
       <Button
@@ -20,4 +20,7 @@ export const FloatingCTA: React.FC<FloatingCTAProps> = React.memo(({ text, onCli
       </Button>
     </div>
   )
-})
+}
+
+FloatingCTAComponent.displayName = 'FloatingCTA'
+export const FloatingCTA = React.memo(FloatingCTAComponent)
