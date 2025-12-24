@@ -1,13 +1,13 @@
 import {
-  Search,
-  Handshake,
-  FileText,
-  MapPin,
-  Megaphone,
   Building,
   Calculator,
+  FileText,
+  Handshake,
+  MapPin,
+  Megaphone,
   Network,
-} from "lucide-react"
+  Search,
+} from 'lucide-react'
 
 export const serviceConfig = [
   {

@@ -1,8 +1,19 @@
 # ExpandNord Website
 
 [![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/klaudijas-projects-2e61cdde/v0-expand-nord-website)
+# ExpandNord
 
-## Overview
+Business expansion consultancy connecting Baltic and Nordic markets.
+
+## Tech Stack
+
+- **Framework**: Next.js 16 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 4
+- **UI Components**: Radix UI
+- **Icons**: Lucide React
+- **Linting**: Biome
+- **Forms**: Web3Forms
 
 ExpandNord is a business expansion consultancy website that bridges Baltic and Nordic markets. This modern, multi-language single-page application showcases services for companies looking to expand between the Baltic states (Estonia, Latvia, Lithuania) and Nordic countries (Denmark, Finland, Iceland, Norway, Sweden).
 
@@ -83,29 +94,71 @@ ExpandNord/
 - **ContactSection**: Interactive form with validation
 - **BalticDivider**: Custom SVG divider with traditional patterns
 - **FloatingCTA**: Persistent call-to-action button
+## Getting Started
+
+### Prerequisites
+
+- Node.js 20.9 or later
+- bun, pnpm, or npm
+
+### Installation
+
+```bash
+# Install dependencies
+bun install
+
+# Start development server
+bun dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Production Build
+
+```bash
+bun run build
+bun start
+```
+
+### Linting & Formatting
+
+```bash
+bun run lint      # Check for issues
+bun run format    # Format code
+bun run check     # Fix all issues
+bun run typecheck # TypeScript check
+```
+
+## Project Structure
+
+```
+├── app/                    # Next.js App Router
+│   ├── privacy/           # Privacy policy page
+│   ├── terms/             # Terms of service page
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Home page
+├── components/            # React components
+│   └── ui/               # Base UI components
+├── hooks/                 # Custom React hooks
+├── lib/                   # Utilities and configurations
+│   └── translations/      # Multi-language support
+└── public/               # Static assets
+```
+
+## Features
+
+- Multi-language support (English, Lithuanian, Norwegian)
+- Responsive design
+- Contact form via Web3Forms
+- Animated sections with Intersection Observer
+- Language preference persistence
+- React Compiler for automatic memoization
+- PWA support
 
 ## Deployment
 
-The project is deployed on Vercel for optimal performance and scalability.
-
-## Design System
-
-- **Primary Colors**: 
-  - Dark Green: `#0A2D28`
-  - Medium Green: `#6EA282`
-  - Light Green: `#9ED0A8`
-- **Typography**: System fonts with responsive sizing
-- **Animations**: Smooth transitions and scroll-triggered effects
-- **Patterns**: Baltic-inspired decorative elements
-
-## Performance Features
-
-- React.memo for component optimization
-- Intersection Observer for lazy animations
-- Debounced scroll tracking
-- Efficient translation system with memoization
-- Optimized image loading and rendering
+Deployed on Vercel at [expandnord.com](https://expandnord.com). Push to `main` to trigger automatic deployment.
 
 ## License
 
-This project is proprietary software. All rights reserved.
+All rights reserved. Copyright ExpandNord.

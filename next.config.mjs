@@ -1,13 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
   images: {
-    unoptimized: true,
+    formats: ['image/avif', 'image/webp'],
+    qualities: [75, 90],
+  },
+  // Next.js 16: Enable React Compiler for automatic memoization
+  reactCompiler: true,
+  experimental: {
+    // Turbopack file system caching for faster dev rebuilds
+    turbopackFileSystemCacheForDev: true,
   },
 }
 

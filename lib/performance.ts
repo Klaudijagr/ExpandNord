@@ -2,10 +2,7 @@
  * Performance monitoring utilities
  */
 
-export const measurePerformance = <T>(
-  name: string,
-  fn: () => T
-): T => {
+export const measurePerformance = <T>(name: string, fn: () => T): T => {
   const start = performance.now()
   const result = fn()
   const end = performance.now()
@@ -24,10 +21,7 @@ export const measureAsyncPerformance = async <T>(
   return result
 }
 
-export const debounce = <T extends (...args: any[]) => void>(
-  func: T,
-  delay: number
-): T => {
+export const debounce = <T extends (...args: unknown[]) => void>(func: T, delay: number): T => {
   let timeoutId: NodeJS.Timeout
   return ((...args: Parameters<T>) => {
     clearTimeout(timeoutId)
@@ -35,16 +29,15 @@ export const debounce = <T extends (...args: any[]) => void>(
   }) as T
 }
 
-export const throttle = <T extends (...args: any[]) => void>(
-  func: T,
-  limit: number
-): T => {
-  let inThrottle: boolean
+export const throttle = <T extends (...args: unknown[]) => void>(func: T, limit: number): T => {
+  let inThrottle = false
   return ((...args: Parameters<T>) => {
     if (!inThrottle) {
       func(...args)
       inThrottle = true
-      setTimeout(() => (inThrottle = false), limit)
+      setTimeout(() => {
+        inThrottle = false
+      }, limit)
     }
   }) as T
 }
